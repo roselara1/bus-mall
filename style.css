@@ -1,1 +1,26 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(3, 3, 177);
+    font-size: 55px;
+    text-shadow: black
+}
 
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: brown;
+    font-size: 25px;
+}
+
+img {
+    width: 30%;
+    height: 40%;
+}
+
+footer {
+   margin-top: 35%;
+   margin-bottom: 0px;
+   margin-left: 45%;
+   margin-right: 40%;
+}
