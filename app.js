@@ -5,10 +5,19 @@ var allDisplayImages=[];
 //store current images value array
 var currentValues = [];
 
+//count the image views and clicks
+var countViews = [];
+var countClicks = [];
+
+//var for the previous image shown
+var priorImage = [];
+
 //make constructor function
 function DisplayImage(name, filepath) {
   this.name = name;
   this.filepath = filepath;
+  this.countViews = 0;
+  this.countClicks = 0;
   allDisplayImages.push(this);
 }
 //use my constructor function
