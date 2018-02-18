@@ -90,7 +90,7 @@ function clickImg3() {
   console.log(randomGen);
   randomPicture();
 }
-
+//generate the list with text describing results
 function showResults () {
   var totalVotesChart = document.getElementById('totalVotesChart');
   var listElement = document.createElement('ol');
@@ -119,13 +119,13 @@ function randomGen() {
 display();
 
 //check for localStorage data
-let iCanHazVotes;
+let dataVotes;
 
-if (localStorage.getItem('iCanHazVotes')) {
-  iCanHazVotes = JSON.parse(localStorage.getItem('iCanHazVotes'));
+if (localStorage.getItem('dataVotes')) {
+  dataVotes = JSON.parse(localStorage.getItem('dataVotes'));
 }
 else {
-  iCanHazVotes = [];
+  dataVotes = [];
 }
 
 function randomPicture() {
@@ -135,14 +135,13 @@ function randomPicture() {
     imgEl2.removeEventListener('click', clickImg2);
     imgEl3.removeEventListener('click', clickImg3);
 
-    localStorage.pictures = JSON.stringify(allPictures);
+    localStorage.setItem('pictures', JSON.stringify(allPictures));
+    localStorage.setItem('dataVotes', JSON.stringify(trackVotes));
     showVotes();
     showResults();
     displayChart();
-    localStorage.setItem('iCanHazVotes', JSON.stringify(trackVotes));
   }
   else {
-
     //ensure images do not repeat
     console.log(currentPictures);
     for (var i=0; i<3; i++) {
@@ -200,5 +199,6 @@ function displayChart(){
   });
   return resultsChart;
 }
+
 showResults();
 randomPicture();
