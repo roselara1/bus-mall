@@ -14,8 +14,15 @@ h2 {
 }
 
 img {
+    position: relative;
     width: 30%;
-    height: 40%;
+    height: 60%;
+    object-fit: scale-down;
+    border: 7px solid black;
+    border-top-color: pink;
+    border-bottom-color: pink;
+    border-left-color: indigo;
+    border-right-color: indigo;
 }
 
 footer {

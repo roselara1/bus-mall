@@ -3,6 +3,8 @@
 <head>
     <title>Bus Mall</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
 </head>
 <body>
     <h1>~~Welcome to Bus Mall~~</h1>
@@ -11,11 +13,14 @@
     <img id="secondImage" src="">
     <img id="thirdImage" src="">
 
-<h2>Please select an image out of the 3 presented below. You may select the same image again if it presents itself later on. Happy clicking!</h2>
+<h2>Please select a product out of the 3 presented above. Happy clicking!</h2>
 
+<div id=totalVotesChart>Votes and Views</div>
 
-    <script src="app.js"></script>
-
+<canvas id="displayChart" height="400%" width="500%"></canvas>
+    
+<script src="second.js"></script>
+    
 
     <footer>&#169; Bus Mall 2018</footer>
 </body>
